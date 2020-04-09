@@ -1,0 +1,38 @@
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+
+:host {
+  $mobile-right-left-spacing: 15px;
+  $text-color-grey: $grey-00;
+
+  padding: 20px $mobile-right-left-spacing;
+  display: block;
+
+  @include for-desktop {
+    padding: 20px;
+  }
+
+  .notification-wrapper {
+    margin-bottom: 10px;
+    mat-icon {
+      width: auto;
+      height: auto;
+    }
+    img {
+      width: 50px;
+    }
+
+    .notification-date {
+      color: $text-color-grey;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+
+  .delete-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin: 20px 0;
+  }
+}

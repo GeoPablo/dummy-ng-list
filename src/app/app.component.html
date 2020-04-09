@@ -1,0 +1,21 @@
+<mat-selection-list #notificationList>
+  <mat-list-option
+    *ngFor="let notification of notifications"
+    [value]="notification._id"
+    class="notification-wrapper"
+  >
+    <span [innerHTML]="notification.value"></span>
+    <span class="notification-date">{{ notification.createdAt | date }}</span>
+  </mat-list-option>
+</mat-selection-list>
+
+<p>Options selected: {{ notificationList.selectedOptions.selected.length }}</p>
+
+<button
+  mat-button
+  class="delete-btn color__orange"
+  [disabled]="!notificationList.selectedOptions.selected.length"
+  (click)="onDeleteMarkedItems()"
+>
+  Delete marked items
+</button>

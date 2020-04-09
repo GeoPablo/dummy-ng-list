@@ -1,0 +1,36 @@
+/*
+ * File: _mixins.scss
+ * Project: georgianstan
+ * Version:0.0.1
+ * Created Date: Tuesday, October 22nd 2019, 3:41:07 pm
+ * Author: Georgian Stan (georgian.stan8@gmail.com)
+ * -----
+ * Last Modified: Monday, 2nd December 2019 4:53:57 pm
+ * Modified By: Georgian Stan (georgian.stan8@gmail.com>)
+ */
+
+@mixin only-for-phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
