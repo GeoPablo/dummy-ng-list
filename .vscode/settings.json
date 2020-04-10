@@ -3,5 +3,6 @@
     "titleBar.activeBackground": "#00cec9",
     "titleBar.activeForeground": "#ffffff"
   },
-  "window.titleBarStyle": "custom"
+  "window.titleBarStyle": "custom",
+  "git.ignoreLimitWarning": true
 }
